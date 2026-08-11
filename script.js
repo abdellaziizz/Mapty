@@ -153,6 +153,7 @@ class App {
     this.#workouts.push(workout);
     //Render workout on the map
     this.renderWorkoutMarker(workout);
+    this._renderWorkout(workout);
     //Clear input fields
     inputCadence.value =
       inputDistance.value =
@@ -212,8 +213,8 @@ class App {
             <span class="workout__unit">m</span>
           </div>
         </li>`;
-      form.insertAdjacentHTML('afterend', html);
     }
+    form.insertAdjacentHTML('afterend', html);
   }
 }
 const app = new App();
